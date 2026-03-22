@@ -1,0 +1,4 @@
+[submodule "CTPSimulator"]
+	path = CTPSimulator
+	url = https://github.com/vatsimnetwork/ctp-simulator/
+	branch = development

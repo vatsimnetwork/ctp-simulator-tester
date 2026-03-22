@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11612.150 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTPSimulatorTester", "CTPSimulatorTester\CTPSimulatorTester.csproj", "{0A2C7965-A269-D1BD-260C-D9070A946066}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTPSimulator", "CTPSimulator\CTPSimulator.csproj", "{7EC27291-86B0-92A7-1515-5F06AAC93F2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A2C7965-A269-D1BD-260C-D9070A946066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2C7965-A269-D1BD-260C-D9070A946066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2C7965-A269-D1BD-260C-D9070A946066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2C7965-A269-D1BD-260C-D9070A946066}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC27291-86B0-92A7-1515-5F06AAC93F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC27291-86B0-92A7-1515-5F06AAC93F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC27291-86B0-92A7-1515-5F06AAC93F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC27291-86B0-92A7-1515-5F06AAC93F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2D03E7B-4C21-4D8B-9B78-022C5499BFA0}
+	EndGlobalSection
+EndGlobal
