@@ -10,7 +10,11 @@ namespace CTPSimulatorTester
         static async Task Main(string[] args)
         {
             var vatsimEvent = TestingDataLoader.Load("25W");
+            vatsimEvent.CalculationParameters.CalculateThroughputDataOnlyForManuallyProvidedSectors = false;
+            vatsimEvent.Date = new DateOnly(2025, 04, 26);
+            vatsimEvent.Sectors = await SectorParsing.LoadSectors();
 
+            // slot calculation
             Stopwatch stopWatch = Stopwatch.StartNew();
             await SlotDistributionCreator.CreateSlotDistribution(vatsimEvent);
             stopWatch.Stop();
@@ -51,7 +55,14 @@ namespace CTPSimulatorTester
             }
             Console.WriteLine(table.ToString());
 
-            Console.WriteLine($"Calculation took {stopWatch.ElapsedMilliseconds}ms");
+            Console.WriteLine($"Slot calculation took {stopWatch.ElapsedMilliseconds}ms");
+
+            // event simulation
+            stopWatch = Stopwatch.StartNew();
+            await Simulator.SimulateEvent(vatsimEvent);
+            stopWatch.Stop();
+
+            Console.WriteLine($"Event simulation took {stopWatch.ElapsedMilliseconds}ms");
 
             // Block this task until the program is closed.
             await Task.Delay(-1);
